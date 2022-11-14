@@ -24,7 +24,7 @@ local Window = Rayfield:CreateWindow({
 
 	--# Keysystem is auto off on default, do not turn it on!
 	KeySettings = {
-		Title = "Sirius Hub",
+		Title = "RoHub | Free",
 		Subtitle = "Key System",
 		Note = "Join the discord (discord.gg/sirius)",
 		FileName = "SiriusKey",
@@ -69,6 +69,8 @@ end
 local Games = {
 	["Merge_Simulator"] = 10925589760,
 	["Broken_Bones_IV"] = 2551991523,
+    ["Race_Clicker"] = 9285238704,
+    ["Cheese_Escape"] = 5777099015,
 }
 
 
@@ -298,7 +300,7 @@ if game.PlaceId == Games.Merge_Simulator then
 end
 
 if game.PlaceId == Games.Broken_Bones_IV then
-	local Tab = Window:CreateTab("Main") -- Title, Image
+	local Tab = Window:CreateTab("Main")
 
 	local Button = Tab:CreateButton({
 		Name = "Start",
@@ -331,4 +333,27 @@ if game.PlaceId == Games.Broken_Bones_IV then
 			game.workspace[player]:BreakJoints()
 	end,
 	})
+end
+
+if game.PlaceId == Games.Race_Clicker then -- NOT DONE (void making)
+    local AutoClick
+
+    local RaceTab = Window:CreateTab("Auto")
+
+    local AutoClicker = RaceTab:CreateToggle({
+	    Name = "Auto Clicker",
+	    CurrentValue = false,
+	    Flag = "Toggle2",
+	    Callback = function(Value)
+        AutoClick = Value
+        while AutoClick do
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.ClickService.RF.Click:InvokeServer()
+            wait(0.000000000000001)
+	    end
+    end
+})
+end
+
+if game.PlaceId == Games.Cheese_Escape then -- would like to do (WIP)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = -279, 7, -15
 end
