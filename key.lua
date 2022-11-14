@@ -1,13 +1,13 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
-	Name = "Rayfield Example Window",
-	LoadingTitle = "Rayfield Interface Suite",
-	LoadingSubtitle = "by Sirius",
+	Name = "RoHub Key System",
+	LoadingTitle = "RoHub Key System",
+	LoadingSubtitle = "by RoHub Dev Team",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = nil, -- Create a custom folder for your hub/game
-		FileName = "Big Hub"
+		FileName = "RoHub"
 	},
         Discord = {
         	Enabled = false,
@@ -26,8 +26,11 @@ local Window = Rayfield:CreateWindow({
 	}
 })
 
+_G.Key = "Test",
+_G.KeyInput == Value
+
 function MakeScriptHub()
-    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/voidded/RoHub-Free/main/games/brokenbones.lua",true))()
 end
 
 local KeyTab = Window:CreateTab("Key", 4483362458)
@@ -36,6 +39,16 @@ local Input = KeyTab:CreateInput({
 	Name = "Enter Key",
 	PlaceholderText = "Enter Key",
 	RemoveTextAfterFocusLost = true,
-	Callback = function(Text)
+	Callback = function(Value)
+        _G.KeyInput = Value
+	end,
+})
+
+local Button = KeyTab:CreateButton({
+	Name = "Check Key",
+	Callback = function()
+		if _G.KeyInput == _G.Key then
+            MakeScriptHub()
+        end
 	end,
 })
