@@ -26,14 +26,16 @@ local Window = Rayfield:CreateWindow({
 	}
 })
 
+function MakeScriptHub()
+    
+end
+
 local KeyTab = Window:CreateTab("Key", 4483362458)
 
 local Input = KeyTab:CreateInput({
-	Name = "Input Example",
-	PlaceholderText = "Input Placeholder",
-	RemoveTextAfterFocusLost = false,
+	Name = "Enter Key",
+	PlaceholderText = "Enter Key",
+	RemoveTextAfterFocusLost = true,
 	Callback = function(Text)
-		-- The function that takes place when the input is changed
-    		-- The variable (Text) is a string for the value in the text box
 	end,
 })
