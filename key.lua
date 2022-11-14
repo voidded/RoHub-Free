@@ -30,7 +30,7 @@ _G.Key = "Test",
 _G.KeyInput == Value
 
 function MakeScriptHub()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/voidded/RoHub-Free/main/games/brokenbones.lua",true))()
+    
 end
 
 local KeyTab = Window:CreateTab("Key", 4483362458)
