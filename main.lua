@@ -70,7 +70,7 @@ local Games = {
 	["Merge_Simulator"] = 10925589760,
 	["Broken_Bones_IV"] = 2551991523,
     ["Race_Clicker"] = 9285238704,
-    ["Arsenal"] = , -- DO (will be free)
+    ["Arsenal"] = 286090429, 
 }
 
 
