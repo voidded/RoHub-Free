@@ -800,5 +800,5 @@ if game.PlaceId == Games.Arsenal then
 		workspace.Players.DescendantAdded:Connect(function(v)
 		addtoplayer(v)
 		end
-			end
+			end)
 	})
